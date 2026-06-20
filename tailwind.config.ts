@@ -1,12 +1,11 @@
 import type { Config } from "tailwindcss";
 
 /* ============================================================
-   DAIRY INSURANCE — "Fresh Pasture" palette
-   Token NAMES are inherited from the shared component architecture;
-   VALUES are remapped to pasture green (primary) / stream blue
-   (secondary) / honey gold (accent).
-   clay = pasture green · sage = stream blue · gold = honey
-   cream = milk paper · sand = soft sage
+   CONSTRUCTION PROFESSIONAL LIABILITY — "Swiss Precision" palette
+   Warm ivory #faf8f5 · deep charcoal #1c1c1e · rich copper #b87333
+   Token NAMES match component architecture; VALUES remapped:
+   clay = copper · sage = warm gray-brown · gold = warm gold
+   espresso = charcoal · cream = warm ivory
    ============================================================ */
 
 const config: Config = {
@@ -18,80 +17,80 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#FBF9F4",
-        sand: "#EEF2EA",
+        cream: "#faf8f5",
+        sand: "#f0ede8",
         white: "#FFFFFF",
         clay: {
-          DEFAULT: "#2F6B3E",
-          dark: "#21502E",
-          light: "#4A8B58",
-          50: "#EEF5EF",
-          100: "#D6E8DA",
-          200: "#AED0B7",
-          300: "#82B58F",
-          400: "#5A9B6C",
-          500: "#4A8B58",
-          600: "#2F6B3E",
-          700: "#21502E",
-          800: "#173820",
-          900: "#0F2615",
+          DEFAULT: "#b87333",
+          dark: "#9a5d26",
+          light: "#d4956a",
+          50: "#fdf5ee",
+          100: "#f9e8d4",
+          200: "#f2ceaa",
+          300: "#e8ad76",
+          400: "#d4956a",
+          500: "#b87333",
+          600: "#9a5d26",
+          700: "#7a481c",
+          800: "#5c3415",
+          900: "#3e240e",
         },
         sage: {
-          DEFAULT: "#2E7BB5",
-          dark: "#1F5E8C",
-          light: "#5DA0CC",
-          50: "#ECF4FA",
-          100: "#D2E6F3",
-          200: "#A6CEE4",
-          300: "#5DA0CC",
-          400: "#3E8DC0",
-          500: "#2E7BB5",
-          600: "#1F5E8C",
-          700: "#174866",
+          DEFAULT: "#8a7060",
+          dark: "#6b5545",
+          light: "#b09a88",
+          50: "#f5f0ec",
+          100: "#e8ddd5",
+          200: "#d0bcae",
+          300: "#b09a88",
+          400: "#9a8272",
+          500: "#8a7060",
+          600: "#6b5545",
+          700: "#503e30",
         },
         gold: {
-          DEFAULT: "#E0A82E",
-          dark: "#B98416",
-          light: "#F0C868",
-          50: "#FCF5E6",
-          100: "#F7E8C2",
-          200: "#F0D386",
-          300: "#E8B84B",
-          400: "#E0A82E",
-          500: "#C8921A",
-          600: "#A37412",
+          DEFAULT: "#d4a24a",
+          dark: "#b88328",
+          light: "#e8c07a",
+          50: "#fdf8ee",
+          100: "#f9edcc",
+          200: "#f2d898",
+          300: "#e8c07a",
+          400: "#d4a24a",
+          500: "#b88328",
+          600: "#96671a",
         },
-        espresso: "#1B2A22",
-        cocoa: "#44544A",
-        mocha: "#6E7B71",
-        adobe: "#DCE6D8",
-        adobeDark: "#C4D2BE",
+        espresso: "#1c1c1e",
+        cocoa: "#4a4441",
+        mocha: "#6b6561",
+        adobe: "#e8e3dc",
+        adobeDark: "#d8cfc4",
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "Georgia", "serif"],
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
         body: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        arch: "2rem 2rem 2rem 2rem",
-        arch2: "2.5rem 2.5rem 1.5rem 1.5rem",
-        "4xl": "2rem",
-        "5xl": "2.5rem",
+        arch: "0.25rem",
+        arch2: "0.25rem",
+        "4xl": "0.25rem",
+        "5xl": "0.5rem",
       },
       backgroundImage: {
         "sunrise-bands":
-          "linear-gradient(180deg, #FBF9F4 0%, #F1F5EC 40%, #EEF7EE 70%, #FBF9F4 100%)",
+          "linear-gradient(180deg, #faf8f5 0%, #f0ede8 40%, #f5f0ea 70%, #faf8f5 100%)",
         "warm-radial":
-          "radial-gradient(circle at 30% 20%, rgba(74,139,88,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(46,123,181,0.08) 0%, transparent 55%)",
-        "clay-gradient": "linear-gradient(135deg, #2F6B3E 0%, #4A8B58 100%)",
-        "sage-gradient": "linear-gradient(135deg, #2E7BB5 0%, #5DA0CC 100%)",
-        "gold-gradient": "linear-gradient(135deg, #E0A82E 0%, #F0C868 100%)",
+          "radial-gradient(circle at 30% 20%, rgba(184,115,51,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(184,115,51,0.05) 0%, transparent 55%)",
+        "clay-gradient": "linear-gradient(135deg, #b87333 0%, #d4956a 100%)",
+        "sage-gradient": "linear-gradient(135deg, #8a7060 0%, #b09a88 100%)",
+        "gold-gradient": "linear-gradient(135deg, #d4a24a 0%, #e8c07a 100%)",
       },
       boxShadow: {
-        warm: "0 10px 40px -15px rgba(31, 80, 46, 0.22), 0 4px 12px -6px rgba(27, 42, 34, 0.08)",
-        "warm-lg": "0 30px 70px -20px rgba(31, 80, 46, 0.28), 0 10px 30px -10px rgba(27, 42, 34, 0.10)",
-        card: "0 2px 8px -2px rgba(27, 42, 34, 0.06), 0 1px 3px -1px rgba(27, 42, 34, 0.04)",
-        "card-hover": "0 20px 50px -15px rgba(31, 80, 46, 0.24), 0 8px 20px -8px rgba(27, 42, 34, 0.10)",
-        arch: "inset 0 -8px 30px -10px rgba(31, 80, 46, 0.10)",
+        warm: "0 10px 40px -15px rgba(184,115,51,0.18), 0 4px 12px -6px rgba(28,28,30,0.06)",
+        "warm-lg": "0 30px 70px -20px rgba(184,115,51,0.22), 0 10px 30px -10px rgba(28,28,30,0.08)",
+        card: "0 1px 4px -1px rgba(28,28,30,0.06), 0 1px 2px -1px rgba(28,28,30,0.04)",
+        "card-hover": "0 8px 24px -6px rgba(184,115,51,0.18), 0 4px 12px -4px rgba(28,28,30,0.08)",
+        arch: "inset 0 -4px 20px -6px rgba(184,115,51,0.08)",
       },
       keyframes: {
         "fade-up": { "0%": { opacity: "0", transform: "translateY(20px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
