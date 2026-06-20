@@ -28,7 +28,7 @@ export function ServicesGrid() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {SERVICES.map((service, i) => {
             const Icon = ICONS[service.icon as keyof typeof ICONS] ?? ShieldCheck;
-            const isFeatured = service.slug === "livestock-mortality";
+            const isFeatured = service.slug === "professional-liability";
             return (
               <FadeIn key={service.slug} delay={(i % 4) * 0.05}>
                 <Link href={`/services/${service.slug}`} className={`group relative block h-full p-6 rounded-3xl border transition-all duration-300 hover:-translate-y-1.5 ${isFeatured ? "bg-espresso text-cream border-espresso shadow-warm-lg" : "bg-white text-espresso border-adobe shadow-card hover:shadow-card-hover"}`}>
