@@ -23,9 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `${SITE.url}/locations/${slug}`;
   return {
     title: `${SITE.name} — ${loc.name}`,
-    description: `${loc.blurb} Livestock mortality, workers' comp, farm property, equipment & spoilage, and pollution for ${loc.name} dairy farms. 15-minute quotes.`,
+    description: `${loc.intro} Professional liability (E&O), general liability, workers' comp, commercial auto, umbrella, builders risk, and pollution for ${loc.name} design-build contractors. 15-minute quotes.`,
     alternates: { canonical: url },
-    openGraph: { title: `${SITE.name} — ${loc.name} | Contractors Choice Agency`, description: loc.blurb, url },
+    openGraph: { title: `${SITE.name} — ${loc.name} | Contractors Choice Agency`, description: loc.intro, url },
   };
 }
 
@@ -50,7 +50,7 @@ export default async function LocationPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "InsuranceService",
     name: `${SITE.name} — ${loc.name}`,
-    description: loc.blurb,
+    description: loc.intro,
     url,
     areaServed: { "@type": "Place", name: loc.name },
     provider: { "@type": "InsuranceAgency", name: SITE.name, url: SITE.url, telephone: "+18449675247" },
@@ -80,7 +80,7 @@ export default async function LocationPage({ params }: Props) {
                   {SITE.name} —{" "}
                   <span className="bg-gradient-to-r from-clay via-clay-light to-gold-dark bg-clip-text text-transparent">{loc.name}</span>
                 </h1>
-                <p className="mt-5 lead max-w-2xl">{loc.blurb}</p>
+                <p className="mt-5 lead max-w-2xl">{loc.intro}</p>
                 <div className="mt-7 flex flex-col sm:flex-row gap-3">
                   <Link href="/quote" className="btn-primary">Get a {loc.name} quote<ArrowRight className="h-5 w-5" /></Link>
                   <a href={SITE.phoneHref} className="btn-secondary"><Phone className="h-5 w-5" />{SITE.phone}</a>
